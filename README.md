@@ -216,7 +216,7 @@ This will download all the environs required by WordPress,Mysql, phpMyAdmin inst
 
 ### 5 - Install and Configure Nginx as Reverse Proxy
 
-In this step, we will install the Nginx web server on the host system. We will configure Nginx as a reverse proxy for the Docker container 'wordpress' on the port 8080. 
+In this step, we will install the Nginx web server on the host system. We will configure Nginx as a reverse proxy for the Docker container 'WordPress' on port 8080. 
 
 Install and restart the Nginx on the host system.
 ~~~
@@ -266,7 +266,7 @@ server {
     return 404; # managed by Certbot
 ~~~
 
-Save the file and exit. Also please restart the Nginx service before checking the syntax error. Like this
+Save the file and exit. Also please restart the Nginx service after checking the syntax error. Like this
 ~~~
 nginx -t
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
@@ -277,23 +277,26 @@ systemctl restart nginx
 
 ### 6 - SSL for the domain abhiraj.ga
 
-Here we are  using the paid SSL. The SSL certificates are move to the location "/var/ssl/". I have already defind the SSL file location in the nginx configuration file ( 5 th step ). Like this
+Here we are using the paid SSL. The SSL certificates are moved to the location "/var/ssl/". I have already defined the SSL file location in the Nginx configuration file ( 5 th step ). Like this
+
 ~~~
     ssl_certificate /var/ssl/certificate.crt;
     ssl_certificate_key  /var/ssl/private.key;
 ~~~
 
-
+-----
 Then, Open your web browser and visit the domain name on the nginx configuration 'abhiraj.ga' and you will be redirected to the WordPress installation. Like this.
 
 ![Screenshot from 2022-04-11 14-45-57](https://user-images.githubusercontent.com/103326353/162706518-79a3efcf-4300-4b00-9555-e5204d16e1d2.png)
 
-Alsyo you can check the phpmyadmin connection using your domain name with port http://abhiraj.ga:8000. 
+-----
+Also you can check the PHPMyAdmin connection using your domain name with port http://abhiraj.ga:8000. Here we didn't create a reverse proxy for phpMyadmin, If you want you can set up this same as Nginx conf that I have made in the 5 the step.
+
 
 ![Screenshot from 2022-04-11 15-14-49](https://user-images.githubusercontent.com/103326353/162712534-91bf3a72-8c02-4142-b29e-d8c028087538.png)
 
-
-Now you can install the WordPress. After the installation we have configured the new theme and plugins for the testing.
+-----
+Now you can install WordPress. After the installation, we have configured the new theme and plugins for testing.
 
 
 ![Screenshot from 2022-04-11 14-55-29](https://user-images.githubusercontent.com/103326353/162709109-8fc9c907-9fd5-4b14-8795-c5016bdcd04a.png)
@@ -318,19 +321,4 @@ In this tutorial, I have shown you set up a Wordpress Installation with Docker C
 <a href="https://www.wppredirect.tk/go/?p=918893532145&m=Abhiraj%20Parthan."><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
   </a></p>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
