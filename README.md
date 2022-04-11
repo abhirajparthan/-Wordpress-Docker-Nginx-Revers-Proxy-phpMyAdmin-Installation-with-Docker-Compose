@@ -201,7 +201,7 @@ volumes:
 ----
 ## Testing Docker compose file "docker-compose.yml"
 
-The YAML file is ready to initialize the defined Docker container. Run the following command to set this container.
+The YML file is ready to initialize the defined Docker container. Run the following command to set this container.
 
 ~~~
 docker-compose up -d
@@ -227,7 +227,7 @@ systemctl restart nginx
 systemctl enable nginx
 ~~~
 
-Next, go to the Nginx directory and create a new virtual host configuration for the WordPress container. 
+Next, go to the Nginx directory and create a new virtual host configuration for the WordPress container. Here my domain name is abhiraj.ga. You can add your domain as server_name in the below nginx config file.
 
 ~~~
 cd /etc/nginx/conf.d
@@ -238,7 +238,7 @@ Paste virtual host configuration below:
 
 ~~~
 server {
-    server_name abhiraj.ga;
+    server_name your_domain_name;
     
     listen 443 ssl; 
     ssl_certificate /var/ssl/certificate.crt;
@@ -256,12 +256,12 @@ server {
 }
 
 server {
-    if ($host = abhiraj.ga) {
+    if ($host = your_domain_name) {
         return 301 https://$host$request_uri;
     } 
 
     listen 80;
-    server_name abhiraj.ga;
+    server_name your_domain_name;
     return 404;
 ~~~
 
