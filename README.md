@@ -1,4 +1,4 @@
-# -Wordpress-Docker-phpMyAdmin-Installation-with-Docker-Compose
+# Wordpress-Docker-phpMyAdmin-Installation-with-Docker-Compose
 
 
 
@@ -277,7 +277,7 @@ systemctl restart nginx
 
 ### 6 - SSL for the domain abhiraj.ga
 
-Here we are  using the paid SSL. The SSL certificates are move to the location "/var/ssl/". I have alrewady defind the SSL file location in the nginx configuration file ( 5 th step ). Like this
+Here we are  using the paid SSL. The SSL certificates are move to the location "/var/ssl/". I have already defind the SSL file location in the nginx configuration file ( 5 th step ). Like this
 ~~~
     ssl_certificate /var/ssl/certificate.crt;
     ssl_certificate_key  /var/ssl/private.key;
@@ -288,7 +288,7 @@ Then, Open your web browser and visit the domain name on the nginx configuration
 
 ![Screenshot from 2022-04-11 14-45-57](https://user-images.githubusercontent.com/103326353/162706518-79a3efcf-4300-4b00-9555-e5204d16e1d2.png)
 
-Alsyo you can check the phpmyadmin connection using your domain name with port http://abhiraj.ga:8000
+Alsyo you can check the phpmyadmin connection using your domain name with port http://abhiraj.ga:8000. 
 
 ![Screenshot from 2022-04-11 15-14-49](https://user-images.githubusercontent.com/103326353/162712534-91bf3a72-8c02-4142-b29e-d8c028087538.png)
 
