@@ -1,6 +1,5 @@
-# -Wordpress-Docker-Nginx-Revers-Proxy-phpMyAdmin-Installation-with-Docker-Compose
+# -Wordpress-Docker-phpMyAdmin-Installation-with-Docker-Compose
 
-# Wordpress+Docker+Nginx Revers Proxy+phpMyAdmin+Installation-with-Docker-Compose
 
 
 WordPress is the most commonly used management system. It's written in PHP, stores data in a MySQL database, and is usually executed behind an Apache website. In this tutorial, I will install WordPress by using multiple docker containers. WordPress itself is in one container and the MariaDB database in another container, Also installing the phpMyAdmin container for database management. Then we will install Nginx on the host machine as a reverse proxy for the WordPress container. 
@@ -199,6 +198,7 @@ volumes:
   wordpress-data:
 ~~~ 
 
+----
 ## Testing Docker compose file "docker-compose.yml"
 
 The YAML file is ready to initialize the defined Docker container. Run the following command to set this container.
