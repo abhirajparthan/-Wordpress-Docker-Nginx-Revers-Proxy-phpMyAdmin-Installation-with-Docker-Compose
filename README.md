@@ -2,7 +2,7 @@
 
 
 
-WordPress is the most commonly used management system. It's written in PHP, stores data in a MySQL database, and is usually executed behind an Apache website. In this tutorial, I will install WordPress by using multiple docker containers. WordPress itself is in one container and the MariaDB database in another container, Also installing the phpMyAdmin container for database management. Then we will install Nginx on the host machine as a reverse proxy for the WordPress container. 
+WordPress is the most commonly used management system. It's written in PHP, stores data in a MySQL database, and is usually executed behind an Apache website. In this tutorial, I will install WordPress by using multiple docker containers. WordPress itself is in one container and the MySQL database in another container, Also installing the phpMyAdmin container for database management. Then we will install Nginx on the host machine as a reverse proxy for the WordPress container. 
 
 ------
 ### Prerequisites
