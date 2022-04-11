@@ -258,12 +258,11 @@ server {
 server {
     if ($host = abhiraj.ga) {
         return 301 https://$host$request_uri;
-    } # managed by Certbot
-
+    } 
 
     listen 80;
     server_name abhiraj.ga;
-    return 404; # managed by Certbot
+    return 404;
 ~~~
 
 Save the file and exit. Also please restart the Nginx service after checking the syntax error. Like this
