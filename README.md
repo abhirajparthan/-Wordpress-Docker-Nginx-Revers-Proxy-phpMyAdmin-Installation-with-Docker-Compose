@@ -265,7 +265,7 @@ server {
     return 404;
 ~~~
 
-Save the file and exit. Also please restart the Nginx service after checking the syntax error. Like this
+Save the file and exit. Also please restart the Nginx service after checking the nginx syntax error. Like this
 ~~~
 nginx -t
 nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
@@ -284,12 +284,12 @@ Here we are using the paid SSL. The SSL certificates are moved to the location "
 ~~~
 
 -----
-Then, Open your web browser and visit the domain name on the nginx configuration 'abhiraj.ga' and you will be redirected to the WordPress installation. Like this.
+Then, Open your web browser and visit your domain name on the nginx configuration (my domain is Abhiraj.ga ) and you will be redirected to the WordPress installation. Like this.
 
 ![Screenshot from 2022-04-11 14-45-57](https://user-images.githubusercontent.com/103326353/162706518-79a3efcf-4300-4b00-9555-e5204d16e1d2.png)
 
 -----
-Also you can check the PHPMyAdmin connection using your domain name with port http://abhiraj.ga:8000. Here we didn't create a reverse proxy for phpMyadmin, If you want you can set up this same as Nginx conf that I have made in the 5 the step.
+Also you can check the PHPMyAdmin connection using your domain name with port like this http://abhiraj.ga:8000. Here we didn't create a reverse proxy for phpMyadmin, If you want you can set up this same as Nginx conf that I have made in the 5 the step.
 
 
 ![Screenshot from 2022-04-11 15-14-49](https://user-images.githubusercontent.com/103326353/162712534-91bf3a72-8c02-4142-b29e-d8c028087538.png)
